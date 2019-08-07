@@ -1,0 +1,2322 @@
+<html style="background-color: #282923;margin:auto;text-align: center;">
+	<head>
+
+	<style>
+
+		*{
+			color: white;
+		}
+		button, input, option, select
+		{
+			color: black;
+		}
+		table{
+			text-align: center;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="moment.js"></script>
+	</head>
+	<h1 style="color:white">Calculate prayer (gilded altar)</h1>
+	<script>
+
+
+
+
+$(document).ready(function(){
+
+		$("#currentlvl").change(function(){
+
+	var value = $("#currentlvl").val();
+
+	if(value == 2)
+	{
+
+		$("#inputtarget").siblings("#input").val("83");
+	}
+	if(value == 3)
+	{
+		$("#inputtarget").siblings("#input").val("174");
+	}
+	if(value == 4)
+	{
+		$("#inputtarget").siblings("#input").val("276");
+	}
+	if(value == 5)
+	{
+		$("#inputtarget").siblings("#input").val("388");
+	}
+	if(value == 6)
+	{
+		$("#inputtarget").siblings("#input").val("512");
+	}
+	if(value == 7)
+	{
+		$("#inputtarget").siblings("#input").val("650");
+	}
+	if(value == 8)
+	{
+		$("#inputtarget").siblings("#input").val("801");
+	}
+	if(value == 9)
+	{
+		$("#inputtarget").siblings("#input").val("969");
+	}
+	if(value == 10)
+	{
+		$("#inputtarget").siblings("#input").val("1154");
+	}
+	if(value == 11)
+	{
+		$("#inputtarget").siblings("#input").val("1358");
+	}
+	if(value == 12)
+	{
+		$("#inputtarget").siblings("#input").val("1584");
+	}
+	if(value == 13)
+	{
+		$("#inputtarget").siblings("#input").val("1833");
+	}
+	if(value == 14)
+	{
+		$("#inputtarget").siblings("#input").val("2107");
+	}
+	if(value == 15)
+	{
+		$("#inputtarget").siblings("#input").val("2411");
+	}
+	if(value == 16)
+	{
+		$("#inputtarget").siblings("#input").val("2746");
+	}
+	if(value == 17)
+	{
+		$("#inputtarget").siblings("#input").val("3115");
+	}
+	if(value == 18)
+	{
+		$("#inputtarget").siblings("#input").val("3523");
+	}
+	if(value == 19)
+	{
+		$("#inputtarget").siblings("#input").val("3973");
+	}
+	if(value == 20)
+	{
+		$("#inputtarget").siblings("#input").val("4470");
+	}
+	if(value == 21)
+	{
+		$("#inputtarget").siblings("#input").val("5018");
+	}
+	if(value == 22)
+	{
+		$("#inputtarget").siblings("#input").val("5624");
+	}
+	if(value == 23)
+	{
+		$("#inputtarget").siblings("#input").val("6291");
+	}
+	if(value == 24)
+	{
+		$("#inputtarget").siblings("#input").val("7028");
+	}
+	if(value == 25)
+	{
+		$("#inputtarget").siblings("#input").val("7842");
+	}
+	if(value == 26)
+	{
+		$("#inputtarget").siblings("#input").val("8740");
+	}
+	if(value == 27)
+	{
+		$("#inputtarget").siblings("#input").val("9730");
+	}
+	if(value == 28)
+	{
+		$("#inputtarget").siblings("#input").val("10824");
+	}
+	if(value == 29)
+	{
+		$("#inputtarget").siblings("#input").val("12031");
+	}
+	if(value == 30)
+	{
+		$("#inputtarget").siblings("#input").val("13363");
+	}
+	if(value == 31)
+	{
+		$("#inputtarget").siblings("#input").val("14833");
+	}
+	if(value == 32)
+	{
+		$("#inputtarget").siblings("#input").val("16456");
+	}
+	if(value == 33)
+	{
+		$("#inputtarget").siblings("#input").val("18247");
+	}
+	if(value == 34)
+	{
+		$("#inputtarget").siblings("#input").val("20244");
+	}
+	if(value == 35)
+	{
+		$("#inputtarget").siblings("#input").val("22406");
+	}
+	if(value == 36)
+	{
+		$("#inputtarget").siblings("#input").val("24815");
+	}
+	if(value == 37)
+	{
+		$("#inputtarget").siblings("#input").val("27473");
+	}
+	if(value == 38)
+	{
+		$("#inputtarget").siblings("#input").val("30408");
+	}
+	if(value == 39)
+	{
+		$("#inputtarget").siblings("#input").val("33648");
+	}
+	if(value == 40)
+	{
+		$("#inputtarget").siblings("#input").val("37224");
+	}
+	if(value == 41)
+	{
+		$("#inputtarget").siblings("#input").val("41171");
+	}
+	if(value == 42)
+	{
+		$("#inputtarget").siblings("#input").val("45529");
+	}
+	if(value == 43)
+	{
+		$("#inputtarget").siblings("#input").val("50339");
+	}
+	if(value == 44)
+	{
+		$("#inputtarget").siblings("#input").val("55649");
+	}
+	if(value == 45)
+	{
+		$("#inputtarget").siblings("#input").val("61512");
+	}
+	if(value == 46)
+	{
+		$("#inputtarget").siblings("#input").val("67983");
+	}
+	if(value == 47)
+	{
+		$("#inputtarget").siblings("#input").val("75127");
+	}
+	if(value == 48)
+	{
+		$("#inputtarget").siblings("#input").val("83014");
+	}
+	if(value == 49)
+	{
+		$("#inputtarget").siblings("#input").val("91721");
+	}
+	if(value == 50)
+	{
+		$("#inputtarget").siblings("#input").val("101333");
+	}
+	if(value == 51)
+	{
+		$("#inputtarget").siblings("#input").val("111945");
+	}
+	if(value == 52)
+	{
+		$("#inputtarget").siblings("#input").val("123660");
+	}
+	if(value == 53)
+	{
+		$("#inputtarget").siblings("#input").val("136594");
+	}
+	if(value == 54)
+	{
+		$("#inputtarget").siblings("#input").val("150872");
+	}
+	if(value == 55)
+	{
+		$("#inputtarget").siblings("#input").val("166636");
+	}
+	if(value == 56)
+	{
+		$("#inputtarget").siblings("#input").val("184040");
+	}
+	if(value == 57)
+	{
+		$("#inputtarget").siblings("#input").val("203254");
+	}
+	if(value == 58)
+	{
+		$("#inputtarget").siblings("#input").val("224466");
+	}
+	if(value == 59)
+	{
+		$("#inputtarget").siblings("#input").val("247886");
+	}
+	if(value == 60)
+	{
+		$("#inputtarget").siblings("#input").val("273742");
+	}
+	if(value == 61)
+	{
+		$("#inputtarget").siblings("#input").val("302288");
+	}
+	if(value == 62)
+	{
+		$("#inputtarget").siblings("#input").val("333804");
+	}
+	if(value == 63)
+	{
+		$("#inputtarget").siblings("#input").val("368599");
+	}
+	if(value == 64)
+	{
+		$("#inputtarget").siblings("#input").val("407015");
+	}
+	if(value == 65)
+	{
+		$("#inputtarget").siblings("#input").val("449328");
+	}
+	if(value == 66)
+	{
+		$("#inputtarget").siblings("#input").val("496254");
+	}
+	if(value == 67)
+	{
+		$("#inputtarget").siblings("#input").val("547953");
+	}
+	if(value == 68)
+	{
+		$("#inputtarget").siblings("#input").val("605032");
+	}
+	if(value == 69)
+	{
+		$("#inputtarget").siblings("#input").val("668051");
+	}
+	if(value == 70)
+	{
+		$("#inputtarget").siblings("#input").val("737627");
+	}
+	if(value == 71)
+	{
+		$("#inputtarget").siblings("#input").val("814445");
+	}
+	if(value == 72)
+	{
+		$("#inputtarget").siblings("#input").val("899257");
+	}
+	if(value == 73)
+	{
+		$("#inputtarget").siblings("#input").val("992895");
+	}
+	if(value == 74)
+	{
+		$("#inputtarget").siblings("#input").val("1096278");
+	}
+	if(value == 75)
+	{
+		$("#inputtarget").siblings("#input").val("1210421");
+	}
+	if(value == 76)
+	{
+		$("#inputtarget").siblings("#input").val("1336443");
+	}
+	if(value == 77)
+	{
+		$("#inputtarget").siblings("#input").val("1475581");
+	}
+	if(value == 78)
+	{
+		$("#inputtarget").siblings("#input").val("1629200");
+	}
+	if(value == 79)
+	{
+		$("#inputtarget").siblings("#input").val("1798808");
+	}
+	if(value == 80)
+	{
+		$("#inputtarget").siblings("#input").val("1986068");
+	}
+	if(value == 81)
+	{
+		$("#inputtarget").siblings("#input").val("2192818");
+	}
+	if(value == 82)
+	{
+		$("#inputtarget").siblings("#input").val("2421087");
+	}
+	if(value == 83)
+	{
+		$("#inputtarget").siblings("#input").val("2673114");
+	}
+	if(value == 84)
+	{
+		$("#inputtarget").siblings("#input").val("2951373");
+	}
+	if(value == 85)
+	{
+		$("#inputtarget").siblings("#input").val("3258594");
+	}
+	if(value == 86)
+	{
+		$("#inputtarget").siblings("#input").val("3597792");
+	}
+	if(value == 87)
+	{
+		$("#inputtarget").siblings("#input").val("3972294");
+	}
+	if(value == 88)
+	{
+		$("#inputtarget").siblings("#input").val("4385776");
+	}
+	if(value == 89)
+	{
+		$("#inputtarget").siblings("#input").val("4842295");
+	}
+	if(value == 90)
+	{
+		$("#inputtarget").siblings("#input").val("5346332");
+	}
+	if(value == 91)
+	{
+		$("#inputtarget").siblings("#input").val("5902831");
+	}
+	if(value == 92)
+	{
+		$("#inputtarget").siblings("#input").val("6517253");
+	}
+	if(value == 93)
+	{
+		$("#inputtarget").siblings("#input").val("7195629");
+	}
+	if(value == 94)
+	{
+		$("#inputtarget").siblings("#input").val("7944614");
+	}
+	if(value == 95)
+	{
+		$("#inputtarget").siblings("#input").val("8771558");
+	}
+	if(value == 96)
+	{
+		$("#inputtarget").siblings("#input").val("9684577");
+	}
+	if(value == 97)
+	{
+		$("#inputtarget").siblings("#input").val("10692629");
+	}
+	if(value == 98)
+	{
+		$("#inputtarget").siblings("#input").val("11805606");
+	}
+	if(value == 99)
+	{
+		$("#inputtarget").siblings("#input").val("13034431");
+	}
+	if(value == 100)
+	{
+		$("#inputtarget").siblings("#input").val("14391160");
+	}
+	if(value == 101)
+	{
+		$("#inputtarget").siblings("#input").val("15889109");
+	}
+	if(value == 102)
+	{
+		$("#inputtarget").siblings("#input").val("17542976");
+	}
+	if(value == 103)
+	{
+		$("#inputtarget").siblings("#input").val("19368992");
+	}
+	if(value == 104)
+	{
+		$("#inputtarget").siblings("#input").val("21385073");
+	}
+	if(value == 105)
+	{
+		$("#inputtarget").siblings("#input").val("23611006");
+	}
+	if(value == 106)
+	{
+		$("#inputtarget").siblings("#input").val("26068632");
+	}
+	if(value == 107)
+	{
+		$("#inputtarget").siblings("#input").val("28782069");
+	}
+	if(value == 108)
+	{
+		$("#inputtarget").siblings("#input").val("31777943");
+	}
+	if(value == 109)
+	{
+		$("#inputtarget").siblings("#input").val("35085654");
+	}
+	if(value == 110)
+	{
+		$("#inputtarget").siblings("#input").val("38737661");
+	}
+	if(value == 111)
+	{
+		$("#inputtarget").siblings("#input").val("42769801");
+	}
+	if(value == 112)
+	{
+		$("#inputtarget").siblings("#input").val("47221641");
+	}
+	if(value == 113)
+	{
+		$("#inputtarget").siblings("#input").val("52136869");
+	}
+	if(value == 114)
+	{
+		$("#inputtarget").siblings("#input").val("57563718");
+	}
+	if(value == 115)
+	{
+		$("#inputtarget").siblings("#input").val("63555443");
+	}
+	if(value == 116)
+	{
+		$("#inputtarget").siblings("#input").val("70170840");
+	}
+	if(value == 117)
+	{
+		$("#inputtarget").siblings("#input").val("77474828");
+	}
+	if(value == 118)
+	{
+		$("#inputtarget").siblings("#input").val("85539082");
+	}
+	if(value == 119)
+	{
+		$("#inputtarget").siblings("#input").val("94442737");
+	}
+	if(value == 120)
+	{
+		$("#inputtarget").siblings("#input").val("104273167");
+	}
+})
+
+
+	$("#currentlvl").keyup(function(){
+
+	var value = $("#currentlvl").val();
+
+	if(value == 2)
+	{
+		$("#inputtarget").siblings("#input").val("83");
+	}
+	if(value == 3)
+	{
+		$("#inputtarget").siblings("#input").val("174");
+	}
+	if(value == 4)
+	{
+		$("#inputtarget").siblings("#input").val("276");
+	}
+	if(value == 5)
+	{
+		$("#inputtarget").siblings("#input").val("388");
+	}
+	if(value == 6)
+	{
+		$("#inputtarget").siblings("#input").val("512");
+	}
+	if(value == 7)
+	{
+		$("#inputtarget").siblings("#input").val("650");
+	}
+	if(value == 8)
+	{
+		$("#inputtarget").siblings("#input").val("801");
+	}
+	if(value == 9)
+	{
+		$("#inputtarget").siblings("#input").val("969");
+	}
+	if(value == 10)
+	{
+		$("#inputtarget").siblings("#input").val("1154");
+	}
+	if(value == 11)
+	{
+		$("#inputtarget").siblings("#input").val("1358");
+	}
+	if(value == 12)
+	{
+		$("#inputtarget").siblings("#input").val("1584");
+	}
+	if(value == 13)
+	{
+		$("#inputtarget").siblings("#input").val("1833");
+	}
+	if(value == 14)
+	{
+		$("#inputtarget").siblings("#input").val("2107");
+	}
+	if(value == 15)
+	{
+		$("#inputtarget").siblings("#input").val("2411");
+	}
+	if(value == 16)
+	{
+		$("#inputtarget").siblings("#input").val("2746");
+	}
+	if(value == 17)
+	{
+		$("#inputtarget").siblings("#input").val("3115");
+	}
+	if(value == 18)
+	{
+		$("#inputtarget").siblings("#input").val("3523");
+	}
+	if(value == 19)
+	{
+		$("#inputtarget").siblings("#input").val("3973");
+	}
+	if(value == 20)
+	{
+		$("#inputtarget").siblings("#input").val("4470");
+	}
+	if(value == 21)
+	{
+		$("#inputtarget").siblings("#input").val("5018");
+	}
+	if(value == 22)
+	{
+		$("#inputtarget").siblings("#input").val("5624");
+	}
+	if(value == 23)
+	{
+		$("#inputtarget").siblings("#input").val("6291");
+	}
+	if(value == 24)
+	{
+		$("#inputtarget").siblings("#input").val("7028");
+	}
+	if(value == 25)
+	{
+		$("#inputtarget").siblings("#input").val("7842");
+	}
+	if(value == 26)
+	{
+		$("#inputtarget").siblings("#input").val("8740");
+	}
+	if(value == 27)
+	{
+		$("#inputtarget").siblings("#input").val("9730");
+	}
+	if(value == 28)
+	{
+		$("#inputtarget").siblings("#input").val("10824");
+	}
+	if(value == 29)
+	{
+		$("#inputtarget").siblings("#input").val("12031");
+	}
+	if(value == 30)
+	{
+		$("#inputtarget").siblings("#input").val("13363");
+	}
+	if(value == 31)
+	{
+		$("#inputtarget").siblings("#input").val("14833");
+	}
+	if(value == 32)
+	{
+		$("#inputtarget").siblings("#input").val("16456");
+	}
+	if(value == 33)
+	{
+		$("#inputtarget").siblings("#input").val("18247");
+	}
+	if(value == 34)
+	{
+		$("#inputtarget").siblings("#input").val("20244");
+	}
+	if(value == 35)
+	{
+		$("#inputtarget").siblings("#input").val("22406");
+	}
+	if(value == 36)
+	{
+		$("#inputtarget").siblings("#input").val("24815");
+	}
+	if(value == 37)
+	{
+		$("#inputtarget").siblings("#input").val("27473");
+	}
+	if(value == 38)
+	{
+		$("#inputtarget").siblings("#input").val("30408");
+	}
+	if(value == 39)
+	{
+		$("#inputtarget").siblings("#input").val("33648");
+	}
+	if(value == 40)
+	{
+		$("#inputtarget").siblings("#input").val("37224");
+	}
+	if(value == 41)
+	{
+		$("#inputtarget").siblings("#input").val("41171");
+	}
+	if(value == 42)
+	{
+		$("#inputtarget").siblings("#input").val("45529");
+	}
+	if(value == 43)
+	{
+		$("#inputtarget").siblings("#input").val("50339");
+	}
+	if(value == 44)
+	{
+		$("#inputtarget").siblings("#input").val("55649");
+	}
+	if(value == 45)
+	{
+		$("#inputtarget").siblings("#input").val("61512");
+	}
+	if(value == 46)
+	{
+		$("#inputtarget").siblings("#input").val("67983");
+	}
+	if(value == 47)
+	{
+		$("#inputtarget").siblings("#input").val("75127");
+	}
+	if(value == 48)
+	{
+		$("#inputtarget").siblings("#input").val("83014");
+	}
+	if(value == 49)
+	{
+		$("#inputtarget").siblings("#input").val("91721");
+	}
+	if(value == 50)
+	{
+		$("#inputtarget").siblings("#input").val("101333");
+	}
+	if(value == 51)
+	{
+		$("#inputtarget").siblings("#input").val("111945");
+	}
+	if(value == 52)
+	{
+		$("#inputtarget").siblings("#input").val("123660");
+	}
+	if(value == 53)
+	{
+		$("#inputtarget").siblings("#input").val("136594");
+	}
+	if(value == 54)
+	{
+		$("#inputtarget").siblings("#input").val("150872");
+	}
+	if(value == 55)
+	{
+		$("#inputtarget").siblings("#input").val("166636");
+	}
+	if(value == 56)
+	{
+		$("#inputtarget").siblings("#input").val("184040");
+	}
+	if(value == 57)
+	{
+		$("#inputtarget").siblings("#input").val("203254");
+	}
+	if(value == 58)
+	{
+		$("#inputtarget").siblings("#input").val("224466");
+	}
+	if(value == 59)
+	{
+		$("#inputtarget").siblings("#input").val("247886");
+	}
+	if(value == 60)
+	{
+		$("#inputtarget").siblings("#input").val("273742");
+	}
+	if(value == 61)
+	{
+		$("#inputtarget").siblings("#input").val("302288");
+	}
+	if(value == 62)
+	{
+		$("#inputtarget").siblings("#input").val("333804");
+	}
+	if(value == 63)
+	{
+		$("#inputtarget").siblings("#input").val("368599");
+	}
+	if(value == 64)
+	{
+		$("#inputtarget").siblings("#input").val("407015");
+	}
+	if(value == 65)
+	{
+		$("#inputtarget").siblings("#input").val("449328");
+	}
+	if(value == 66)
+	{
+		$("#inputtarget").siblings("#input").val("496254");
+	}
+	if(value == 67)
+	{
+		$("#inputtarget").siblings("#input").val("547953");
+	}
+	if(value == 68)
+	{
+		$("#inputtarget").siblings("#input").val("605032");
+	}
+	if(value == 69)
+	{
+		$("#inputtarget").siblings("#input").val("668051");
+	}
+	if(value == 70)
+	{
+		$("#inputtarget").siblings("#input").val("737627");
+	}
+	if(value == 71)
+	{
+		$("#inputtarget").siblings("#input").val("814445");
+	}
+	if(value == 72)
+	{
+		$("#inputtarget").siblings("#input").val("899257");
+	}
+	if(value == 73)
+	{
+		$("#inputtarget").siblings("#input").val("992895");
+	}
+	if(value == 74)
+	{
+		$("#inputtarget").siblings("#input").val("1096278");
+	}
+	if(value == 75)
+	{
+		$("#inputtarget").siblings("#input").val("1210421");
+	}
+	if(value == 76)
+	{
+		$("#inputtarget").siblings("#input").val("1336443");
+	}
+	if(value == 77)
+	{
+		$("#inputtarget").siblings("#input").val("1475581");
+	}
+	if(value == 78)
+	{
+		$("#inputtarget").siblings("#input").val("1629200");
+	}
+	if(value == 79)
+	{
+		$("#inputtarget").siblings("#input").val("1798808");
+	}
+	if(value == 80)
+	{
+		$("#inputtarget").siblings("#input").val("1986068");
+	}
+	if(value == 81)
+	{
+		$("#inputtarget").siblings("#input").val("2192818");
+	}
+	if(value == 82)
+	{
+		$("#inputtarget").siblings("#input").val("2421087");
+	}
+	if(value == 83)
+	{
+		$("#inputtarget").siblings("#input").val("2673114");
+	}
+	if(value == 84)
+	{
+		$("#inputtarget").siblings("#input").val("2951373");
+	}
+	if(value == 85)
+	{
+		$("#inputtarget").siblings("#input").val("3258594");
+	}
+	if(value == 86)
+	{
+		$("#inputtarget").siblings("#input").val("3597792");
+	}
+	if(value == 87)
+	{
+		$("#inputtarget").siblings("#input").val("3972294");
+	}
+	if(value == 88)
+	{
+		$("#inputtarget").siblings("#input").val("4385776");
+	}
+	if(value == 89)
+	{
+		$("#inputtarget").siblings("#input").val("4842295");
+	}
+	if(value == 90)
+	{
+		$("#inputtarget").siblings("#input").val("5346332");
+	}
+	if(value == 91)
+	{
+		$("#inputtarget").siblings("#input").val("5902831");
+	}
+	if(value == 92)
+	{
+		$("#inputtarget").siblings("#input").val("6517253");
+	}
+	if(value == 93)
+	{
+		$("#inputtarget").siblings("#input").val("7195629");
+	}
+	if(value == 94)
+	{
+		$("#inputtarget").siblings("#input").val("7944614");
+	}
+	if(value == 95)
+	{
+		$("#inputtarget").siblings("#input").val("8771558");
+	}
+	if(value == 96)
+	{
+		$("#inputtarget").siblings("#input").val("9684577");
+	}
+	if(value == 97)
+	{
+		$("#inputtarget").siblings("#input").val("10692629");
+	}
+	if(value == 98)
+	{
+		$("#inputtarget").siblings("#input").val("11805606");
+	}
+	if(value == 99)
+	{
+		$("#inputtarget").siblings("#input").val("13034431");
+	}
+	if(value == 100)
+	{
+		$("#inputtarget").siblings("#input").val("14391160");
+	}
+	if(value == 101)
+	{
+		$("#inputtarget").siblings("#input").val("15889109");
+	}
+	if(value == 102)
+	{
+		$("#inputtarget").siblings("#input").val("17542976");
+	}
+	if(value == 103)
+	{
+		$("#inputtarget").siblings("#input").val("19368992");
+	}
+	if(value == 104)
+	{
+		$("#inputtarget").siblings("#input").val("21385073");
+	}
+	if(value == 105)
+	{
+		$("#inputtarget").siblings("#input").val("23611006");
+	}
+	if(value == 106)
+	{
+		$("#inputtarget").siblings("#input").val("26068632");
+	}
+	if(value == 107)
+	{
+		$("#inputtarget").siblings("#input").val("28782069");
+	}
+	if(value == 108)
+	{
+		$("#inputtarget").siblings("#input").val("31777943");
+	}
+	if(value == 109)
+	{
+		$("#inputtarget").siblings("#input").val("35085654");
+	}
+	if(value == 110)
+	{
+		$("#inputtarget").siblings("#input").val("38737661");
+	}
+	if(value == 111)
+	{
+		$("#inputtarget").siblings("#input").val("42769801");
+	}
+	if(value == 112)
+	{
+		$("#inputtarget").siblings("#input").val("47221641");
+	}
+	if(value == 113)
+	{
+		$("#inputtarget").siblings("#input").val("52136869");
+	}
+	if(value == 114)
+	{
+		$("#inputtarget").siblings("#input").val("57563718");
+	}
+	if(value == 115)
+	{
+		$("#inputtarget").siblings("#input").val("63555443");
+	}
+	if(value == 116)
+	{
+		$("#inputtarget").siblings("#input").val("70170840");
+	}
+	if(value == 117)
+	{
+		$("#inputtarget").siblings("#input").val("77474828");
+	}
+	if(value == 118)
+	{
+		$("#inputtarget").siblings("#input").val("85539082");
+	}
+	if(value == 119)
+	{
+		$("#inputtarget").siblings("#input").val("94442737");
+	}
+	if(value == 120)
+	{
+		$("#inputtarget").siblings("#input").val("104273167");
+	}
+})
+
+
+$("#customlvl").keyup(function(){
+
+	var value = $("#customlvl").val();
+
+	if(value == 2)
+	{
+		$("#inputtarget").val("83");
+	}
+	if(value == 3)
+	{
+		$("#inputtarget").val("174");
+	}
+	if(value == 4)
+	{
+		$("#inputtarget").val("276");
+	}
+	if(value == 5)
+	{
+		$("#inputtarget").val("388");
+	}
+	if(value == 6)
+	{
+		$("#inputtarget").val("512");
+	}
+	if(value == 7)
+	{
+		$("#inputtarget").val("650");
+	}
+	if(value == 8)
+	{
+		$("#inputtarget").val("801");
+	}
+	if(value == 9)
+	{
+		$("#inputtarget").val("969");
+	}
+	if(value == 10)
+	{
+		$("#inputtarget").val("1154");
+	}
+	if(value == 11)
+	{
+		$("#inputtarget").val("1358");
+	}
+	if(value == 12)
+	{
+		$("#inputtarget").val("1584");
+	}
+	if(value == 13)
+	{
+		$("#inputtarget").val("1833");
+	}
+	if(value == 14)
+	{
+		$("#inputtarget").val("2107");
+	}
+	if(value == 15)
+	{
+		$("#inputtarget").val("2411");
+	}
+	if(value == 16)
+	{
+		$("#inputtarget").val("2746");
+	}
+	if(value == 17)
+	{
+		$("#inputtarget").val("3115");
+	}
+	if(value == 18)
+	{
+		$("#inputtarget").val("3523");
+	}
+	if(value == 19)
+	{
+		$("#inputtarget").val("3973");
+	}
+	if(value == 20)
+	{
+		$("#inputtarget").val("4470");
+	}
+	if(value == 21)
+	{
+		$("#inputtarget").val("5018");
+	}
+	if(value == 22)
+	{
+		$("#inputtarget").val("5624");
+	}
+	if(value == 23)
+	{
+		$("#inputtarget").val("6291");
+	}
+	if(value == 24)
+	{
+		$("#inputtarget").val("7028");
+	}
+	if(value == 25)
+	{
+		$("#inputtarget").val("7842");
+	}
+	if(value == 26)
+	{
+		$("#inputtarget").val("8740");
+	}
+	if(value == 27)
+	{
+		$("#inputtarget").val("9730");
+	}
+	if(value == 28)
+	{
+		$("#inputtarget").val("10824");
+	}
+	if(value == 29)
+	{
+		$("#inputtarget").val("12031");
+	}
+	if(value == 30)
+	{
+		$("#inputtarget").val("13363");
+	}
+	if(value == 31)
+	{
+		$("#inputtarget").val("14833");
+	}
+	if(value == 32)
+	{
+		$("#inputtarget").val("16456");
+	}
+	if(value == 33)
+	{
+		$("#inputtarget").val("18247");
+	}
+	if(value == 34)
+	{
+		$("#inputtarget").val("20244");
+	}
+	if(value == 35)
+	{
+		$("#inputtarget").val("22406");
+	}
+	if(value == 36)
+	{
+		$("#inputtarget").val("24815");
+	}
+	if(value == 37)
+	{
+		$("#inputtarget").val("27473");
+	}
+	if(value == 38)
+	{
+		$("#inputtarget").val("30408");
+	}
+	if(value == 39)
+	{
+		$("#inputtarget").val("33648");
+	}
+	if(value == 40)
+	{
+		$("#inputtarget").val("37224");
+	}
+	if(value == 41)
+	{
+		$("#inputtarget").val("41171");
+	}
+	if(value == 42)
+	{
+		$("#inputtarget").val("45529");
+	}
+	if(value == 43)
+	{
+		$("#inputtarget").val("50339");
+	}
+	if(value == 44)
+	{
+		$("#inputtarget").val("55649");
+	}
+	if(value == 45)
+	{
+		$("#inputtarget").val("61512");
+	}
+	if(value == 46)
+	{
+		$("#inputtarget").val("67983");
+	}
+	if(value == 47)
+	{
+		$("#inputtarget").val("75127");
+	}
+	if(value == 48)
+	{
+		$("#inputtarget").val("83014");
+	}
+	if(value == 49)
+	{
+		$("#inputtarget").val("91721");
+	}
+	if(value == 50)
+	{
+		$("#inputtarget").val("101333");
+	}
+	if(value == 51)
+	{
+		$("#inputtarget").val("111945");
+	}
+	if(value == 52)
+	{
+		$("#inputtarget").val("123660");
+	}
+	if(value == 53)
+	{
+		$("#inputtarget").val("136594");
+	}
+	if(value == 54)
+	{
+		$("#inputtarget").val("150872");
+	}
+	if(value == 55)
+	{
+		$("#inputtarget").val("166636");
+	}
+	if(value == 56)
+	{
+		$("#inputtarget").val("184040");
+	}
+	if(value == 57)
+	{
+		$("#inputtarget").val("203254");
+	}
+	if(value == 58)
+	{
+		$("#inputtarget").val("224466");
+	}
+	if(value == 59)
+	{
+		$("#inputtarget").val("247886");
+	}
+	if(value == 60)
+	{
+		$("#inputtarget").val("273742");
+	}
+	if(value == 61)
+	{
+		$("#inputtarget").val("302288");
+	}
+	if(value == 62)
+	{
+		$("#inputtarget").val("333804");
+	}
+	if(value == 63)
+	{
+		$("#inputtarget").val("368599");
+	}
+	if(value == 64)
+	{
+		$("#inputtarget").val("407015");
+	}
+	if(value == 65)
+	{
+		$("#inputtarget").val("449328");
+	}
+	if(value == 66)
+	{
+		$("#inputtarget").val("496254");
+	}
+	if(value == 67)
+	{
+		$("#inputtarget").val("547953");
+	}
+	if(value == 68)
+	{
+		$("#inputtarget").val("605032");
+	}
+	if(value == 69)
+	{
+		$("#inputtarget").val("668051");
+	}
+	if(value == 70)
+	{
+		$("#inputtarget").val("737627");
+	}
+	if(value == 71)
+	{
+		$("#inputtarget").val("814445");
+	}
+	if(value == 72)
+	{
+		$("#inputtarget").val("899257");
+	}
+	if(value == 73)
+	{
+		$("#inputtarget").val("992895");
+	}
+	if(value == 74)
+	{
+		$("#inputtarget").val("1096278");
+	}
+	if(value == 75)
+	{
+		$("#inputtarget").val("1210421");
+	}
+	if(value == 76)
+	{
+		$("#inputtarget").val("1336443");
+	}
+	if(value == 77)
+	{
+		$("#inputtarget").val("1475581");
+	}
+	if(value == 78)
+	{
+		$("#inputtarget").val("1629200");
+	}
+	if(value == 79)
+	{
+		$("#inputtarget").val("1798808");
+	}
+	if(value == 80)
+	{
+		$("#inputtarget").val("1986068");
+	}
+	if(value == 81)
+	{
+		$("#inputtarget").val("2192818");
+	}
+	if(value == 82)
+	{
+		$("#inputtarget").val("2421087");
+	}
+	if(value == 83)
+	{
+		$("#inputtarget").val("2673114");
+	}
+	if(value == 84)
+	{
+		$("#inputtarget").val("2951373");
+	}
+	if(value == 85)
+	{
+		$("#inputtarget").val("3258594");
+	}
+	if(value == 86)
+	{
+		$("#inputtarget").val("3597792");
+	}
+	if(value == 87)
+	{
+		$("#inputtarget").val("3972294");
+	}
+	if(value == 88)
+	{
+		$("#inputtarget").val("4385776");
+	}
+	if(value == 89)
+	{
+		$("#inputtarget").val("4842295");
+	}
+	if(value == 90)
+	{
+		$("#inputtarget").val("5346332");
+	}
+	if(value == 91)
+	{
+		$("#inputtarget").val("5902831");
+	}
+	if(value == 92)
+	{
+		$("#inputtarget").val("6517253");
+	}
+	if(value == 93)
+	{
+		$("#inputtarget").val("7195629");
+	}
+	if(value == 94)
+	{
+		$("#inputtarget").val("7944614");
+	}
+	if(value == 95)
+	{
+		$("#inputtarget").val("8771558");
+	}
+	if(value == 96)
+	{
+		$("#inputtarget").val("9684577");
+	}
+	if(value == 97)
+	{
+		$("#inputtarget").val("10692629");
+	}
+	if(value == 98)
+	{
+		$("#inputtarget").val("11805606");
+	}
+	if(value == 99)
+	{
+		$("#inputtarget").val("13034431");
+	}
+	if(value == 100)
+	{
+		$("#inputtarget").val("14391160");
+	}
+	if(value == 101)
+	{
+		$("#inputtarget").val("15889109");
+	}
+	if(value == 102)
+	{
+		$("#inputtarget").val("17542976");
+	}
+	if(value == 103)
+	{
+		$("#inputtarget").val("19368992");
+	}
+	if(value == 104)
+	{
+		$("#inputtarget").val("21385073");
+	}
+	if(value == 105)
+	{
+		$("#inputtarget").val("23611006");
+	}
+	if(value == 106)
+	{
+		$("#inputtarget").val("26068632");
+	}
+	if(value == 107)
+	{
+		$("#inputtarget").val("28782069");
+	}
+	if(value == 108)
+	{
+		$("#inputtarget").val("31777943");
+	}
+	if(value == 109)
+	{
+		$("#inputtarget").val("35085654");
+	}
+	if(value == 110)
+	{
+		$("#inputtarget").val("38737661");
+	}
+	if(value == 111)
+	{
+		$("#inputtarget").val("42769801");
+	}
+	if(value == 112)
+	{
+		$("#inputtarget").val("47221641");
+	}
+	if(value == 113)
+	{
+		$("#inputtarget").val("52136869");
+	}
+	if(value == 114)
+	{
+		$("#inputtarget").val("57563718");
+	}
+	if(value == 115)
+	{
+		$("#inputtarget").val("63555443");
+	}
+	if(value == 116)
+	{
+		$("#inputtarget").val("70170840");
+	}
+	if(value == 117)
+	{
+		$("#inputtarget").val("77474828");
+	}
+	if(value == 118)
+	{
+		$("#inputtarget").val("85539082");
+	}
+	if(value == 119)
+	{
+		$("#inputtarget").val("94442737");
+	}
+	if(value == 120)
+	{
+		$("#inputtarget").val("104273167");
+	}
+})
+
+$("#customlvl").change(function(){
+
+	var value = $("#customlvl").val();
+
+	if(value == 2)
+	{
+		$("#inputtarget").val("83");
+	}
+	if(value == 3)
+	{
+		$("#inputtarget").val("174");
+	}
+	if(value == 4)
+	{
+		$("#inputtarget").val("276");
+	}
+	if(value == 5)
+	{
+		$("#inputtarget").val("388");
+	}
+	if(value == 6)
+	{
+		$("#inputtarget").val("512");
+	}
+	if(value == 7)
+	{
+		$("#inputtarget").val("650");
+	}
+	if(value == 8)
+	{
+		$("#inputtarget").val("801");
+	}
+	if(value == 9)
+	{
+		$("#inputtarget").val("969");
+	}
+	if(value == 10)
+	{
+		$("#inputtarget").val("1154");
+	}
+	if(value == 11)
+	{
+		$("#inputtarget").val("1358");
+	}
+	if(value == 12)
+	{
+		$("#inputtarget").val("1584");
+	}
+	if(value == 13)
+	{
+		$("#inputtarget").val("1833");
+	}
+	if(value == 14)
+	{
+		$("#inputtarget").val("2107");
+	}
+	if(value == 15)
+	{
+		$("#inputtarget").val("2411");
+	}
+	if(value == 16)
+	{
+		$("#inputtarget").val("2746");
+	}
+	if(value == 17)
+	{
+		$("#inputtarget").val("3115");
+	}
+	if(value == 18)
+	{
+		$("#inputtarget").val("3523");
+	}
+	if(value == 19)
+	{
+		$("#inputtarget").val("3973");
+	}
+	if(value == 20)
+	{
+		$("#inputtarget").val("4470");
+	}
+	if(value == 21)
+	{
+		$("#inputtarget").val("5018");
+	}
+	if(value == 22)
+	{
+		$("#inputtarget").val("5624");
+	}
+	if(value == 23)
+	{
+		$("#inputtarget").val("6291");
+	}
+	if(value == 24)
+	{
+		$("#inputtarget").val("7028");
+	}
+	if(value == 25)
+	{
+		$("#inputtarget").val("7842");
+	}
+	if(value == 26)
+	{
+		$("#inputtarget").val("8740");
+	}
+	if(value == 27)
+	{
+		$("#inputtarget").val("9730");
+	}
+	if(value == 28)
+	{
+		$("#inputtarget").val("10824");
+	}
+	if(value == 29)
+	{
+		$("#inputtarget").val("12031");
+	}
+	if(value == 30)
+	{
+		$("#inputtarget").val("13363");
+	}
+	if(value == 31)
+	{
+		$("#inputtarget").val("14833");
+	}
+	if(value == 32)
+	{
+		$("#inputtarget").val("16456");
+	}
+	if(value == 33)
+	{
+		$("#inputtarget").val("18247");
+	}
+	if(value == 34)
+	{
+		$("#inputtarget").val("20244");
+	}
+	if(value == 35)
+	{
+		$("#inputtarget").val("22406");
+	}
+	if(value == 36)
+	{
+		$("#inputtarget").val("24815");
+	}
+	if(value == 37)
+	{
+		$("#inputtarget").val("27473");
+	}
+	if(value == 38)
+	{
+		$("#inputtarget").val("30408");
+	}
+	if(value == 39)
+	{
+		$("#inputtarget").val("33648");
+	}
+	if(value == 40)
+	{
+		$("#inputtarget").val("37224");
+	}
+	if(value == 41)
+	{
+		$("#inputtarget").val("41171");
+	}
+	if(value == 42)
+	{
+		$("#inputtarget").val("45529");
+	}
+	if(value == 43)
+	{
+		$("#inputtarget").val("50339");
+	}
+	if(value == 44)
+	{
+		$("#inputtarget").val("55649");
+	}
+	if(value == 45)
+	{
+		$("#inputtarget").val("61512");
+	}
+	if(value == 46)
+	{
+		$("#inputtarget").val("67983");
+	}
+	if(value == 47)
+	{
+		$("#inputtarget").val("75127");
+	}
+	if(value == 48)
+	{
+		$("#inputtarget").val("83014");
+	}
+	if(value == 49)
+	{
+		$("#inputtarget").val("91721");
+	}
+	if(value == 50)
+	{
+		$("#inputtarget").val("101333");
+	}
+	if(value == 51)
+	{
+		$("#inputtarget").val("111945");
+	}
+	if(value == 52)
+	{
+		$("#inputtarget").val("123660");
+	}
+	if(value == 53)
+	{
+		$("#inputtarget").val("136594");
+	}
+	if(value == 54)
+	{
+		$("#inputtarget").val("150872");
+	}
+	if(value == 55)
+	{
+		$("#inputtarget").val("166636");
+	}
+	if(value == 56)
+	{
+		$("#inputtarget").val("184040");
+	}
+	if(value == 57)
+	{
+		$("#inputtarget").val("203254");
+	}
+	if(value == 58)
+	{
+		$("#inputtarget").val("224466");
+	}
+	if(value == 59)
+	{
+		$("#inputtarget").val("247886");
+	}
+	if(value == 60)
+	{
+		$("#inputtarget").val("273742");
+	}
+	if(value == 61)
+	{
+		$("#inputtarget").val("302288");
+	}
+	if(value == 62)
+	{
+		$("#inputtarget").val("333804");
+	}
+	if(value == 63)
+	{
+		$("#inputtarget").val("368599");
+	}
+	if(value == 64)
+	{
+		$("#inputtarget").val("407015");
+	}
+	if(value == 65)
+	{
+		$("#inputtarget").val("449328");
+	}
+	if(value == 66)
+	{
+		$("#inputtarget").val("496254");
+	}
+	if(value == 67)
+	{
+		$("#inputtarget").val("547953");
+	}
+	if(value == 68)
+	{
+		$("#inputtarget").val("605032");
+	}
+	if(value == 69)
+	{
+		$("#inputtarget").val("668051");
+	}
+	if(value == 70)
+	{
+		$("#inputtarget").val("737627");
+	}
+	if(value == 71)
+	{
+		$("#inputtarget").val("814445");
+	}
+	if(value == 72)
+	{
+		$("#inputtarget").val("899257");
+	}
+	if(value == 73)
+	{
+		$("#inputtarget").val("992895");
+	}
+	if(value == 74)
+	{
+		$("#inputtarget").val("1096278");
+	}
+	if(value == 75)
+	{
+		$("#inputtarget").val("1210421");
+	}
+	if(value == 76)
+	{
+		$("#inputtarget").val("1336443");
+	}
+	if(value == 77)
+	{
+		$("#inputtarget").val("1475581");
+	}
+	if(value == 78)
+	{
+		$("#inputtarget").val("1629200");
+	}
+	if(value == 79)
+	{
+		$("#inputtarget").val("1798808");
+	}
+	if(value == 80)
+	{
+		$("#inputtarget").val("1986068");
+	}
+	if(value == 81)
+	{
+		$("#inputtarget").val("2192818");
+	}
+	if(value == 82)
+	{
+		$("#inputtarget").val("2421087");
+	}
+	if(value == 83)
+	{
+		$("#inputtarget").val("2673114");
+	}
+	if(value == 84)
+	{
+		$("#inputtarget").val("2951373");
+	}
+	if(value == 85)
+	{
+		$("#inputtarget").val("3258594");
+	}
+	if(value == 86)
+	{
+		$("#inputtarget").val("3597792");
+	}
+	if(value == 87)
+	{
+		$("#inputtarget").val("3972294");
+	}
+	if(value == 88)
+	{
+		$("#inputtarget").val("4385776");
+	}
+	if(value == 89)
+	{
+		$("#inputtarget").val("4842295");
+	}
+	if(value == 90)
+	{
+		$("#inputtarget").val("5346332");
+	}
+	if(value == 91)
+	{
+		$("#inputtarget").val("5902831");
+	}
+	if(value == 92)
+	{
+		$("#inputtarget").val("6517253");
+	}
+	if(value == 93)
+	{
+		$("#inputtarget").val("7195629");
+	}
+	if(value == 94)
+	{
+		$("#inputtarget").val("7944614");
+	}
+	if(value == 95)
+	{
+		$("#inputtarget").val("8771558");
+	}
+	if(value == 96)
+	{
+		$("#inputtarget").val("9684577");
+	}
+	if(value == 97)
+	{
+		$("#inputtarget").val("10692629");
+	}
+	if(value == 98)
+	{
+		$("#inputtarget").val("11805606");
+	}
+	if(value == 99)
+	{
+		$("#inputtarget").val("13034431");
+	}
+	if(value == 100)
+	{
+		$("#inputtarget").val("14391160");
+	}
+	if(value == 101)
+	{
+		$("#inputtarget").val("15889109");
+	}
+	if(value == 102)
+	{
+		$("#inputtarget").val("17542976");
+	}
+	if(value == 103)
+	{
+		$("#inputtarget").val("19368992");
+	}
+	if(value == 104)
+	{
+		$("#inputtarget").val("21385073");
+	}
+	if(value == 105)
+	{
+		$("#inputtarget").val("23611006");
+	}
+	if(value == 106)
+	{
+		$("#inputtarget").val("26068632");
+	}
+	if(value == 107)
+	{
+		$("#inputtarget").val("28782069");
+	}
+	if(value == 108)
+	{
+		$("#inputtarget").val("31777943");
+	}
+	if(value == 109)
+	{
+		$("#inputtarget").val("35085654");
+	}
+	if(value == 110)
+	{
+		$("#inputtarget").val("38737661");
+	}
+	if(value == 111)
+	{
+		$("#inputtarget").val("42769801");
+	}
+	if(value == 112)
+	{
+		$("#inputtarget").val("47221641");
+	}
+	if(value == 113)
+	{
+		$("#inputtarget").val("52136869");
+	}
+	if(value == 114)
+	{
+		$("#inputtarget").val("57563718");
+	}
+	if(value == 115)
+	{
+		$("#inputtarget").val("63555443");
+	}
+	if(value == 116)
+	{
+		$("#inputtarget").val("70170840");
+	}
+	if(value == 117)
+	{
+		$("#inputtarget").val("77474828");
+	}
+	if(value == 118)
+	{
+		$("#inputtarget").val("85539082");
+	}
+	if(value == 119)
+	{
+		$("#inputtarget").val("94442737");
+	}
+	if(value == 120)
+	{
+		$("#inputtarget").val("104273167");
+	}
+
+	
+})
+
+
+$("#inputplayer").blur(function(){
+
+	var nimi = $("#inputplayer").val();
+
+		 $.ajax({
+           method: "POST",
+           url: 'get_user_name.php',
+           data:{nimi: nimi},
+           success:function(html) 
+           {
+     
+  
+       			$("#alert").hide();
+       			$("#input").val(html);
+           		
+           	
+
+
+           },
+           error: function(jqXHR, textStatus, errorThrown)
+           {
+           	$("#alert").show();
+           		console.log(errorThrown);
+           }
+
+      });
+})
+
+
+		$("#ninetynine").click(function(){
+			$("#inputtarget").val("13034431");
+		})
+		$("#onetwenty").click(function(){
+			$("#inputtarget").val("104273167");
+		})
+
+	//console.log((moment.duration(0.5, 'hours')._milliseconds / 1000) / 60);
+	 $.ajax({
+           method: "POST",
+           url: 'prayer_calculator.php',
+           success:function(html) 
+           {
+
+           	var dragon_bones = JSON.parse(html[0]);
+			var frost_dragon_bones = JSON.parse(html[1]);
+			var bones = JSON.parse(html[2]);
+			var big_bones = JSON.parse(html[3]);
+			var airut_bones = JSON.parse(html[4]);
+
+ 			$("#bone").html(bones.item.current.price + " gp");
+ 			$("#bigbone").html(big_bones.item.current.price + " gp");
+		    $("#dragonbone").html( dragon_bones.item.current.price + " gp");
+			$("#frostdragonbone").html(frost_dragon_bones.item.current.price + " gp");
+			$("#airutbone").html(airut_bones.item.current.price + " gp");
+           },
+           error: function(jqXHR, textStatus, errorThrown)
+           {
+           		console.log(errorThrown);
+           }
+
+      });
+
+})
+
+function start()
+{
+	var bones_xp = 15.75;
+	var bones_xp_hour = 23388;
+
+	var big_bones_xp = 37.5;
+	var big_bones_xp_hour = 55687;
+	
+	var dragon_bones_xp = 252;
+	var dragon_bones_xp_hour = 374220;
+
+	var frost_dragon_bones_xp = 630;
+	var frost_dragon_bones_xp_hour = 935550;
+
+	var airut_bones_xp = 463.7;
+	var airut_bones_xp_hour = 688594;
+
+	var cleansing_crystal_xp = 9800;
+	var cleansing_crystal_xp_hour = 284200;
+
+	var nimi = $("#input").val();
+
+   $.ajax({
+           method: "POST",
+           url: 'prayer_calculator.php',
+           success:function(html) 
+           {
+
+           	var dragon_bones = JSON.parse(html[0]);
+			var frost_dragon_bones = JSON.parse(html[1]);
+			var bones = JSON.parse(html[2]);
+			var big_bones = JSON.parse(html[3]);
+			var airut_bones = JSON.parse(html[4]);
+
+ 				if(document.getElementById("firstage").checked)
+			   {
+					bones_xp *= 1.06;
+					big_bones_xp *= 1.06;
+			   		dragon_bones_xp *= 1.06;
+			   		frost_dragon_bones_xp *= 1.06;
+			   		airut_bones_xp *= 1.06;
+
+			   		bones_xp_hour *= 1.06;
+			   		big_bones_xp_hour *= 1.06;
+			   		dragon_bones_xp_hour *= 1.06;
+			   		frost_dragon_bones_xp_hour *= 1.06;
+			   		airut_bones_xp_hour *= 1.06;
+			   }
+
+ 			   var remaining_xp = Number($("#inputtarget").val()) - Number($("#input").val());
+
+				if($("#bonusxp").length >0)
+				{
+					remaining_xp -= Number($("#bonusxp").val());
+				}
+
+ 			   var remaining_hours_bone = remaining_xp / bones_xp_hour;
+ 			   var remaining_hours_bigbone = remaining_xp / big_bones_xp_hour;
+ 			   var remaining_hours_dragonbone = remaining_xp / dragon_bones_xp_hour;
+ 			   var remaining_hours_frostdragonbone = remaining_xp / frost_dragon_bones_xp_hour;
+ 			   var remaining_hours_airutbone = remaining_xp / airut_bones_xp_hour;
+ 			   var remaining_hours_cleansingcrystal = remaining_xp / cleansing_crystal_xp_hour;
+	
+ 			   if($( "#myselect option:selected" ).text() == "Cleansing Crystals")
+			   {
+
+			   		var cleansingcrystal_bones_price = 111000;
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / cleansing_crystal_xp).toFixed(0) + "</span> Cleansing Crystals<br> And it will cost <span style='color:lime'>" + ((remaining_xp / cleansing_crystal_xp).toFixed(0) * Number(cleansingcrystal_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_cleansingcrystal.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / cleansing_crystal_xp).toFixed(0) * Number(cleansingcrystal_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / cleansing_crystal_xp).toFixed(0) + "</span> Cleansing Crystals<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_cleansingcrystal.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / cleansing_crystal_xp).toFixed(0) + "</span> Cleansing Crystals<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_cleansingcrystal.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / cleansing_crystal_xp).toFixed(0) + "</span> Cleansing Crystals<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_cleansingcrystal.toFixed(1) + "</span> hours");
+			   		}
+			   }
+
+
+ 			   if($( "#myselect option:selected" ).text() == "Airut Bones")
+			   {
+
+			   		var airut_bones_price = airut_bones.item.current.price.replace(",", "");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / airut_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / airut_bones_xp).toFixed(0) * Number(airut_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_airutbone.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / airut_bones_xp).toFixed(0) * Number(airut_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / airut_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_airutbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / airut_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_airutbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / airut_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_airutbone.toFixed(1) + "</span> hours");
+			   		}
+			   }
+
+			   if($( "#myselect option:selected" ).text() == "Big Bones")
+			   {
+
+			   		var big_bones_price = bones.item.current.price;
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / big_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / big_bones_xp).toFixed(0) * Number(big_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bigbone.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / big_bones_xp).toFixed(0) * Number(big_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / big_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bigbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / big_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bigbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / big_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bigbone.toFixed(1) + "</span> hours");
+			   		}
+			   }
+			   if($( "#myselect option:selected" ).text() == "Bones")
+			   {
+
+			   		var bones_price = bones.item.current.price;
+
+			   		$("#print").html("You will need <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0)).toLocaleString()  + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0) * Number(bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bone.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / bones_xp).toFixed(0) * Number(bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0)).toLocaleString()  + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0)).toLocaleString()  + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0)).toLocaleString()  + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bone.toFixed(1) + "</span> hours");
+			   		}
+			   }
+
+			   if($( "#myselect option:selected" ).text() == "Dragon Bones")
+			   {
+
+			   		var dragon_bones_price = dragon_bones.item.current.price.replace(",", "");
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dragon_bones_xp).toFixed(0) + "</span> Dragon Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / dragon_bones_xp).toFixed(0) * Number(dragon_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dragonbone.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / dragon_bones_xp).toFixed(0) * Number(dragon_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dragon_bones_xp).toFixed(0) + "</span> Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dragonbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dragon_bones_xp).toFixed(0) + "</span> Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dragonbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dragon_bones_xp).toFixed(0) + "</span> Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dragonbone.toFixed(1) + "</span> hours");
+			   		}
+			   }
+			   if($( "#myselect option:selected" ).text() == "Frost Dragon Bones")
+			   {
+			   		var frost_dragon_bones_price = frost_dragon_bones.item.current.price.replace(",", "");
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / frost_dragon_bones_xp).toFixed(0) + "</span> Frost Dragon Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / frost_dragon_bones_xp).toFixed(0) * Number(frost_dragon_bones_price)).toLocaleString() + " gp</span><br> And will take approximately <span style='color:lime'>" + Math.floor(remaining_hours_frostdragonbone).toFixed(1) + "</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_frostdragonbone.toFixed(1) + "</span> hours");
+
+			   			var needed_cash = (remaining_xp / frost_dragon_bones_xp).toFixed(0) * Number(frost_dragon_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 3);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / frost_dragon_bones_xp).toFixed(0) + "</span> Frost Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_frostdragonbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / frost_dragon_bones_xp).toFixed(0) + "</span> Frost Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_frostdragonbone.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / frost_dragon_bones_xp).toFixed(0) + "</span> Frost Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_frostdragonbone.toFixed(1) + "</span> hours");
+			   		}
+
+			   }
+
+
+			   if(Number($("#input").val()) > Number($("#inputtarget").val()))
+			   {
+			   	$("#print").html("<h1 style='color:lime;'>You have already passed that level</h1>");
+			   }
+
+			   $("#remxp").html("<br><span style='font-size:2em;'>XP remaining:</span><span style='color:lime;font-size:2em;'> " +Number($("#inputtarget").val() - $("#input").val()) + "</span>");
+
+           },
+           error: function(jqXHR, textStatus, errorThrown)
+           {
+           		console.log(errorThrown);
+           }
+
+      });
+}
+
+
+</script>
+<div id="prices" style="position: absolute;top:0;left:0;text-align: left;margin-left:10px">
+
+<table border=1>
+	<tr>
+		<td><h2>Bones</h2></td>
+		<td><h2 id="bone"></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Big Bones</h2></td>
+		<td><h2 id="bigbone"></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Dragon Bones</h2></td>
+		<td><h2 id="dragonbone"></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Frost Dragon Bones</h2></td>
+		<td><h2 id="frostdragonbone"></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Airut Bones</h2></td>
+		<td><h2 id="airutbone"></h2></td>
+	</tr>
+	<tr>
+		<td><h2>Cleansing Crystal</h2></td>
+		<td><h2 id="cleansingcrystal">110,000 gp</h2></td>
+	</tr>
+
+</table>
+
+</div>
+<div align="center" style="margin:auto;width:30%;text-align: left;">
+	<span>Enter the name of player </span><input id="inputplayer"  /><span id="alert" style="color:red;display: none;"> Entered user was not found</span><br><br>
+	<span>I will use </span>
+	<select id="myselect">
+		<option>Bones</option>
+		<option>Big Bones</option>
+		<option>Dragon Bones</option>
+		<option>Frost Dragon Bones</option>
+		<option>Airut Bones</option>
+		<option>Cleansing Crystals</option>
+	</select>
+	<br><br>
+	<span>Current xp </span><input id="input" autocomplete="off" /> Custom level: <input type="number" id="currentlvl" style="width:60px;"/> <br><br>
+	<span>Target xp </span><input id="inputtarget"  autocomplete="off" /><br><br>
+	<span>Target level </span><button id="ninetynine">99</button> <button id="onetwenty">120</button> Custom level: <input type="number" id="customlvl" style="width:60px;"/><br><br>
+	<span>I am using full First-Age outfit (+6%xp)</span><input id="firstage" type="checkbox" /><br><br>
+	<span>Bonus xp on prayer </span><input id="bonusxp"  autocomplete="off" /><br><br>
+	<button id="get" onclick="start()" >Calculate</button>
+	<div id="print" style="font-size:2em;"></div>
+	<div id="remxp"></div>
+</div>
+
+
+</html>
+
+
