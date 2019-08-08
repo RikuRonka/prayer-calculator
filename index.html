@@ -26,6 +26,8 @@
 	</head>
 	<h1 style="color:white">So many different bones to train Prayer, but which would be most efficient for you?</h1>
 	<script>
+
+    //bones
 	var bones_xp = 15.75;
 	var bones_xp_hour = 23388;
 
@@ -89,6 +91,23 @@
 	var zogre_bones_bones_xp = 78.75;
 	var zogre_bones_bones_xp_hour = 116943;
 
+	//ashes
+	var accursed_ashes_xp = 43.75;
+	var accursed_ashes_xp_hour = 64968;
+
+	var impious_ashes_xp = 14;
+	var impious_ashes_xp_hour = 20790;
+
+	var infernal_ashes_xp = 218.75;
+	var infernal_ashes_xp_hour = 324843;
+
+	var tortured_ashes_xp = 315;
+	var tortured_ashes_xp_hour = 467775;
+
+	var searing_ashes_xp = 700;
+	var searing_ashes_xp_hour = 467775;
+
+	//other
 	var cleansing_crystal_xp = 9800;
 	var cleansing_crystal_xp_hour = 284200;
 
@@ -110,9 +129,20 @@ var retrieved_shaikahan_bones = localStorage.getItem("shaikahan_bones");
 var retrieved_wolf_bones = localStorage.getItem("wolf_bones");
 var retrieved_wyvern_bones = localStorage.getItem("wyvern_bones");
 var retrieved_zogre_bones = localStorage.getItem("zogre_bones");
+var retrieved_hardened_dragon_bones = localStorage.getItem("hardened_dragon_bones");
+var retrieved_reinforced_dragon_bones = localStorage.getItem("reinforced_dragon_bones");
+
+//ashes
+var retrieved_accursed_ashes= localStorage.getItem("accursed_ashes");
+var retrieved_impious_ashes= localStorage.getItem("impious_ashes");
+var retrieved_infernal_ashes = localStorage.getItem("infernal_ashes");
+var retrieved_tortured_ashes = localStorage.getItem("tortured_ashes");
+var retrieved_searingashes = localStorage.getItem("searing_ashes");
 
 
 $(document).ready(function(){
+
+
 
 var retrieved_dragon_bones = localStorage.getItem("dragon_bones");
 var retrieved_frost_dragon_bones = localStorage.getItem("frost_dragon_bones");
@@ -131,11 +161,19 @@ var retrieved_shaikahan_bones = localStorage.getItem("shaikahan_bones");
 var retrieved_wolf_bones = localStorage.getItem("wolf_bones");
 var retrieved_wyvern_bones = localStorage.getItem("wyvern_bones");
 var retrieved_zogre_bones = localStorage.getItem("zogre_bones");
+var retrieved_hardened_dragon_bones = localStorage.getItem("hardened_dragon_bones");
+var retrieved_reinforced_dragon_bones = localStorage.getItem("reinforced_dragon_bones");
 
+//ashes
+var retrieved_accursed_ashes = localStorage.getItem("accursed_ashes");
+var retrieved_impious_ashes = localStorage.getItem("impious_ashes");
+var retrieved_infernal_ashes = localStorage.getItem("infernal_ashes");
+var retrieved_tortured_ashes = localStorage.getItem("tortured_ashes");
+var retrieved_searingashes = localStorage.getItem("searing_ashes");
 
 if("dragon_bones" in localStorage)
 {
-	$("#bone").html(retrieved_bones + " gp");
+$("#bone").html(retrieved_bones + " gp");
 $("#bigbone").html(retrieved_big_bones + " gp");
 $("#dragonbone").html( retrieved_dragon_bones+ " gp");
 $("#frostdragonbone").html(retrieved_frost_dragon_bones + " gp");
@@ -152,11 +190,16 @@ $("#shaikahanbones").html(retrieved_shaikahan_bones + " gp");
 $("#wolfbones").html(retrieved_wolf_bones + " gp");
 $("#wyvernbones").html(retrieved_wyvern_bones + " gp");
 $("#zogrebones").html(retrieved_zogre_bones + " gp");
+$("#hardeneddragonbones").html(retrieved_hardened_dragon_bones + " gp");
+$("#reinforceddragonbones").html(retrieved_reinforced_dragon_bones + " gp");
+//ashes
+$("#accursedashes").html(retrieved_accursed_ashes + " gp");
+$("#impiousashes").html(retrieved_impious_ashes + " gp");
+$("#infernalashes").html(retrieved_infernal_ashes + " gp");
+$("#torturedashes").html(retrieved_tortured_ashes + " gp");
+$("#searingashes").html(retrieved_searingashes + " gp");
 
 }
-
-
-
 
 var sel = $('#myselect');
 var selected = sel.val(); // cache selected value, before reordering
@@ -166,11 +209,10 @@ sel.html('').append(opts_list);
 sel.val(selected); // set cached
 
 
-
 	$("h2:even").each(function(){
 			$(this).css("text-align", "right");
 			$(this).css("margin-right", "5px");
-			$(this).css("width","270px");
+			$(this).css("width","310px");
 		})
 
 
@@ -178,6 +220,10 @@ sel.val(selected); // set cached
 
 	var value = $("#currentlvl").val();
 
+	if(value == 1)
+	{
+		$("#inputtarget").siblings("#input").val("0");
+	}
 	if(value == 2)
 	{
 
@@ -662,6 +708,11 @@ sel.val(selected); // set cached
 
 	var value = $("#currentlvl").val();
 
+	if(value == 1)
+	{
+		$("#inputtarget").siblings("#input").val("0");
+	}
+
 	if(value == 2)
 	{
 		$("#inputtarget").siblings("#input").val("83");
@@ -1145,6 +1196,11 @@ $("#customlvl").keyup(function(){
 
 	var value = $("#customlvl").val();
 
+	if(value == 1)
+	{
+		$("#inputtarget").siblings("#input").val("0");
+	}
+
 	if(value == 2)
 	{
 		$("#inputtarget").val("83");
@@ -1626,6 +1682,11 @@ $("#customlvl").keyup(function(){
 $("#customlvl").change(function(){
 
 	var value = $("#customlvl").val();
+
+	if(value == 1)
+	{
+		$("#inputtarget").siblings("#input").val("0");
+	}
 
 	if(value == 2)
 	{
@@ -2139,12 +2200,17 @@ $("#inputplayer").blur(function(){
 
 		$("#ninetynine").click(function(){
 			$("#inputtarget").val("13034431");
+			$("#customlvl").val("99");
 		})
 		$("#onetwenty").click(function(){
 			$("#inputtarget").val("104273167");
+			$("#customlvl").val("120");
+
 		})
 
 	//console.log((moment.duration(0.5, 'hours')._milliseconds / 1000) / 60);
+
+
 	 $.ajax({
            method: "POST",
            url: 'prayer_calculator.php',
@@ -2153,23 +2219,32 @@ $("#inputplayer").blur(function(){
 
            	if(html)
            	{
-        	var dragon_bones = JSON.parse(html[0]);
-			var frost_dragon_bones = JSON.parse(html[1]);
-			var bones = JSON.parse(html[2]);
-			var big_bones = JSON.parse(html[3]);
-			var airut_bones = JSON.parse(html[4]);
-			var bat_bones = JSON.parse(html[5]);
-			var burnt_bones = JSON.parse(html[6]);
-			var dagannoth_bones = JSON.parse(html[7]);
-			var fayrg_bones = JSON.parse(html[8]);
-			var jogre_bones = JSON.parse(html[9]);
-			var monkey_bones = JSON.parse(html[10]);
-			var ourg_bones = JSON.parse(html[11]);
-			var raurg_bones = JSON.parse(html[12]);
-			var shaikahan_bones = JSON.parse(html[13]);
-			var wolf_bones = JSON.parse(html[14]);
-			var wyvern_bones = JSON.parse(html[15]);
-			var zogre_bones = JSON.parse(html[16]);
+	        	var dragon_bones = JSON.parse(html[0]);
+				var frost_dragon_bones = JSON.parse(html[1]);
+				var bones = JSON.parse(html[2]);
+				var big_bones = JSON.parse(html[3]);
+				var airut_bones = JSON.parse(html[4]);
+				var bat_bones = JSON.parse(html[5]);
+				var burnt_bones = JSON.parse(html[6]);
+				var dagannoth_bones = JSON.parse(html[7]);
+				var fayrg_bones = JSON.parse(html[8]);
+				var jogre_bones = JSON.parse(html[9]);
+				var monkey_bones = JSON.parse(html[10]);
+				var ourg_bones = JSON.parse(html[11]);
+				var raurg_bones = JSON.parse(html[12]);
+				var shaikahan_bones = JSON.parse(html[13]);
+				var wolf_bones = JSON.parse(html[14]);
+				var wyvern_bones = JSON.parse(html[15]);
+				var zogre_bones = JSON.parse(html[16]);
+				var hardened_dragon_bones = JSON.parse(html[17]);
+				var reinforced_dragon_bones = JSON.parse(html[18]);
+
+				//ashes
+				var accursed_ashes = JSON.parse(html[19]);
+				var impious_ashes = JSON.parse(html[20]);
+				var infernal_ashes = JSON.parse(html[21]);
+				var tortured_ashes = JSON.parse(html[22]);
+				var searing_ashes = JSON.parse(html[23]);
            	}
 
 
@@ -2190,6 +2265,14 @@ $("#inputplayer").blur(function(){
 			localStorage.setItem('wolf_bones', wolf_bones.item.current.price);
 			localStorage.setItem('wyvern_bones', wyvern_bones.item.current.price);
 			localStorage.setItem('zogre_bones', zogre_bones.item.current.price);
+			localStorage.setItem('hardened_dragon_bones', hardened_dragon_bones.item.current.price);
+			localStorage.setItem('reinforced_dragon_bones', reinforced_dragon_bones.item.current.price);
+			//ashes
+			localStorage.setItem('accursed_ashes', accursed_ashes.item.current.price);
+			localStorage.setItem('impious_ashes', impious_ashes.item.current.price);
+			localStorage.setItem('infernal_ashes', infernal_ashes.item.current.price);
+			localStorage.setItem('tortured_ashes', tortured_ashes.item.current.price);
+			localStorage.setItem('searing_ashes', searing_ashes.item.current.price);
 
 
 
@@ -2210,7 +2293,9 @@ $("#inputplayer").blur(function(){
 			$("#wolfbones").html(wolf_bones.item.current.price + " gp");
 			$("#wyvernbones").html(wyvern_bones.item.current.price + " gp");
 			$("#zogrebones").html(zogre_bones.item.current.price + " gp");
-
+			$("#hardened_dragon_bones").html(reinforced_dragon_bones.item.current.price + " gp");
+			$("#reinforced_dragon_bones").html(reinforced_dragon_bones.item.current.price + " gp");
+			
            },
            error: function(jqXHR, textStatus, errorThrown)
            {
@@ -2218,11 +2303,7 @@ $("#inputplayer").blur(function(){
            }
 
       });
-
-
-
-
-
+	
 		$("#doublexp").change(function(){
 	
 			if(document.getElementById("doublexp").checked)
@@ -2283,6 +2364,15 @@ function start()
 			   		wolf_bones_bones_xp *= 1.06;
 			   		wyvern_bones_bones_xp *= 1.06;
 			   		zogre_bones_bones_xp *= 1.06;
+			   		hardened_dragon_bones_xp *= 1.06;
+			   		reinforced_dragon_bones_xp *= 1.06;
+
+			   		//ashes
+			   		accursed_ashes_xp *= 1.06;
+			   		impious_ashes_xp *= 1.06;
+			   		infernal_ashes_xp *= 1.06;
+			   		tortured_ashes_xp *= 1.06;
+			   		searing_ashes_xp *= 1.06;
 
 			   		bones_xp_hour *= 1.06;
 			   		big_bones_xp_hour *= 1.06;
@@ -2301,6 +2391,15 @@ function start()
 			   		wolf_bones_bones_xp_hour *= 1.06;
 			   		wyvern_bones_bones_xp_hour *= 1.06;
 			   		zogre_bones_bones_xp_hour *= 1.06;
+			   		hardened_dragon_bones_xp_hour *= 1.06;
+			   		reinforced_dragon_bones_xp_hour *= 1.06;
+
+			   		//ashes
+			   		accursed_ashes_xp_hour *= 1.06;
+			   		impious_ashes_xp_hour *= 1.06;
+			   		infernal_ashes_xp_hour *= 1.06;
+			   		tortured_ashes_xp_hour *= 1.06;
+			   		searing_ashes_xp_hour *= 1.06;
 
 			   		cleansing_crystal_xp_hour *= 1.06;
 			   		prevent = true
@@ -2331,6 +2430,15 @@ function start()
 			   		wolf_bones_bones_xp /= 1.06;
 			   		wyvern_bones_bones_xp /= 1.06;
 			   		zogre_bones_bones_xp /= 1.06;
+			   		hardened_dragon_bones_xp*= 1.06;
+			   		reinforced_dragon_bones_xp *= 1.06;
+
+			   		//ashes
+			   		accursed_ashes_xp *= 1.06;
+			   		impious_ashes_xp *= 1.06;
+			   		infernal_ashes_xp *= 1.06;
+			   		tortured_ashes_xp *= 1.06;
+			   		searing_ashes_xp *= 1.06;
 
 			   		bones_xp_hour /= 1.06;
 			   		big_bones_xp_hour /= 1.06;
@@ -2349,6 +2457,15 @@ function start()
 			   		wolf_bones_bones_xp_hour /= 1.06;
 			   		wyvern_bones_bones_xp_hour /= 1.06;
 			   		zogre_bones_bones_xp_hour /= 1.06;
+			   		hardened_dragon_bones_xp_hour /= 1.06;
+			   		reinforced_dragon_bones_xp_hour /= 1.06;
+
+			   		//ashes
+			   		accursed_ashes_xp_hour /= 1.06;
+			   		impious_ashes_xp_hour /= 1.06;
+			   		infernal_ashes_xp_hour /= 1.06;
+			   		tortured_ashes_xp_hour /= 1.06;
+			   		searing_ashes_xp_hour /= 1.06;
 
 			   		cleansing_crystal_xp_hour /= 1.06;
 			   		prevent = false;
@@ -2381,10 +2498,215 @@ function start()
  			   var remaining_hours_wolfbone = remaining_xp / wolf_bones_bones_xp_hour;
  			   var remaining_hours_wyvernbone = remaining_xp / wyvern_bones_bones_xp_hour;
  			   var remaining_hours_zogrebone = remaining_xp / zogre_bones_bones_xp_hour;
+ 			   var remaining_hours_hardened_dragon_bones = remaining_xp / hardened_dragon_bones_xp_hour;
+ 			   var remaining_hours_reinforced_dragon_bones = remaining_xp / reinforced_dragon_bones_xp_hour;
+
+ 			   //ashes
+ 			   var remaining_hours_accursed_ashes = remaining_xp / accursed_ashes_xp_hour;
+ 			   var remaining_hours_impious_ashes = remaining_xp / impious_ashes_xp_hour;
+ 			   var remaining_hours_infernal_ashes = remaining_xp / infernal_ashes_xp_hour;
+ 			   var remaining_hours_tortured_ashes = remaining_xp / tortured_ashes_xp_hour;
+ 			   var remaining_hours_searing_ashes = remaining_xp / searing_ashes_xp_hour;
 
 
 
  			   var remaining_hours_cleansingcrystal = remaining_xp / cleansing_crystal_xp_hour;
+
+ 			    if($( "#myselect option:selected" ).text() == "Searing Ashes")
+			   {
+
+			   		var searing_ashes_price = retrieved_searingashes.replace(".", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / searing_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / searing_ashes_xp).toFixed(0) * Number(searing_ashes_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_searing_ashes.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / searing_ashes_xp).toFixed(0) * Number(searing_ashes_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / searing_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_searing_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / searing_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_searing_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / searing_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_searing_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(searing_ashes_xp_hour).substr(0, String(searing_ashes_xp_hour).length -3) + "K</span>");
+			   }
+
+ 			    if($( "#myselect option:selected" ).text() == "Tortured Ashes")
+			   {
+
+			   		var tortured_ashes_price = retrieved_tortured_ashes.replace(",", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / tortured_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / tortured_ashes_xp).toFixed(0) * Number(tortured_ashes_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_tortured_ashes.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / tortured_ashes_xp).toFixed(0) * Number(tortured_ashes_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / tortured_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_tortured_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / tortured_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_tortured_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / tortured_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_tortured_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(tortured_ashes_xp_hour).substr(0, String(tortured_ashes_xp_hour).length -3) + "K</span>");
+			   }
+ 			    if($( "#myselect option:selected" ).text() == "Infernal Ashes")
+			   {
+
+			   		var infernal_ashes_price = retrieved_infernal_ashes.replace(",", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / infernal_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / infernal_ashes_xp).toFixed(0) * Number(infernal_ashes_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_infernal_ashes.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / infernal_ashes_xp).toFixed(0) * Number(infernal_ashes_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / infernal_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_infernal_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / infernal_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_infernal_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / infernal_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_infernal_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(infernal_ashes_xp_hour).substr(0, String(infernal_ashes_xp_hour).length -3) + "K</span>");
+			   }
+
+ 			    if($( "#myselect option:selected" ).text() == "Impious Ashes")
+			   {
+
+			   		var impious_ashes_price = retrieved_impious_ashes.replace(",", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / impious_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / impious_ashes_xp).toFixed(0) * Number(impious_ashes_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_impious_ashes.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / impious_ashes_xp).toFixed(0) * Number(impious_ashes_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / impious_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_impious_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / impious_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_impious_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / impious_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_impious_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(impious_ashes_xp_hour).substr(0, String(impious_ashes_xp_hour).length -3) + "K</span>");
+			   }
+
+ 			    if($( "#myselect option:selected" ).text() == "Accursed Ashes")
+			   {
+
+			   		var accursed_ashes_price = retrieved_accursed_ashes.replace(",", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / accursed_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / accursed_ashes_xp).toFixed(0) * Number(accursed_ashes_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_accursed_ashes.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / accursed_ashes_xp).toFixed(0) * Number(accursed_ashes_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / accursed_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_accursed_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / accursed_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_accursed_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / accursed_ashes_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_accursed_ashes.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(accursed_ashes_xp_hour).substr(0, String(accursed_ashes_xp_hour).length -3) + "K</span>");
+			   }
+
+ 			   if($( "#myselect option:selected" ).text() == "Reinforced Dragon Bones")
+			   {
+
+			   		var reinforced_dragon_bones_price = retrieved_reinforced_dragon_bones.replace(".", "").replace("k", "00");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / reinforced_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / reinforced_dragon_bones_xp).toFixed(0) * Number(reinforced_dragon_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_reinforced_dragon_bones.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / reinforced_dragon_bones_xp).toFixed(0) * Number(reinforced_dragon_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / reinforced_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_reinforced_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / reinforced_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_reinforced_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / reinforced_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_reinforced_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(reinforced_dragon_bones_xp_hour).substr(0, String(reinforced_dragon_bones_xp_hour).length -3) + "K</span>");
+			   }
+
+			   if($( "#myselect option:selected" ).text() == "Hardened Dragon Bones")
+			   {
+
+			   		var hardened_dragon_bones_price = retrieved_hardened_dragon_bones.replace(",", "");
+			
+
+			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / hardened_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / hardened_dragon_bones_xp).toFixed(0) * Number(hardened_dragon_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_hardened_dragon_bones.toFixed(1) + "</span> hours");
+
+			   		var needed_cash = (remaining_xp / hardened_dragon_bones_xp).toFixed(0) * Number(hardened_dragon_bones_price);
+
+			   		if(String(needed_cash).length == 6)
+			   		{
+			   			var newStr = String(needed_cash).substr(0, String(needed_cash).length - 2);
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / hardened_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr + "k gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_hardened_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length <= 9)
+			   		{
+			   			var newStr = needed_cash / 1000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / hardened_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "m gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_hardened_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		if(String(needed_cash).length >= 7 && String(needed_cash).length >= 10)
+			   		{
+			   			var newStr = needed_cash / 1000000000;
+			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / hardened_dragon_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_hardened_dragon_bones.toFixed(1) + "</span> hours");
+			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(hardened_dragon_bones_xp_hour).substr(0, String(hardened_dragon_bones_xp_hour).length -3) + "K</span>");
+			   }
+
  			   if($( "#myselect option:selected" ).text() == "Zogre Bones")
 			   {
 
@@ -2410,6 +2732,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / zogre_bones_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_zogrebone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(zogre_bones_bones_xp_hour).substr(0, String(zogre_bones_bones_xp_hour).length -3) + "K</span>");
 			   }
  			   if($( "#myselect option:selected" ).text() == "Wyvern Bones")
 			   {
@@ -2436,6 +2759,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / wyvern_bones_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_wyvernbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(wyvern_bones_bones_xp_hour).substr(0, String(wyvern_bones_bones_xp_hour).length -3) + "K</span>");
 			   }
  			   if($( "#myselect option:selected" ).text() == "Wolf Bones")
 			   {
@@ -2462,6 +2786,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / wolf_bones_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_wolfbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(wolf_bones_bones_xp_hour).substr(0, String(wolf_bones_bones_xp_hour).length -3) + "K</span>");
 			   }
  			   if($( "#myselect option:selected" ).text() == "Shaikahan Bones")
 			   {
@@ -2488,6 +2813,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / shaikahan_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_shaikahanbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(shaikahan_bones_xp_hour).substr(0, String(shaikahan_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Raurg Bones")
@@ -2515,13 +2841,14 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / raurg_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_raurgbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(raurg_bones_xp_hour).substr(0, String(raurg_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Ourg Bones")
 			   {
 
 			   		var ourg_bones_price = retrieved_ourg_bones.replace(".", "").replace("k", "00");
-			console.log(ourg_bones_price);
+
 
 			   		$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / ourg_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + ((remaining_xp / ourg_bones_xp).toFixed(0) * Number(ourg_bones_price)) + " gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_ourgbone.toFixed(1) + "</span> hours");
 
@@ -2542,6 +2869,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / ourg_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_ourgbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(ourg_bones_xp_hour).substr(0, String(ourg_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Monkey Bones")
@@ -2569,6 +2897,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / monkey_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_monkeybone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(monkey_bones_xp_hour).substr(0, String(monkey_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Jogre Bones")
@@ -2596,6 +2925,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / jogre_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_jogrebone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(jogre_bones_xp_hour).substr(0, String(jogre_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Fayrg Bones")
@@ -2623,6 +2953,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / fayrg_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_fayrgbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(fayrg_bones_xp_hour).substr(0, String(fayrg_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Dagannoth Bones")
@@ -2650,6 +2981,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dagannoth_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dagannothbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(dagannoth_bones_xp_hour).substr(0, String(dagannoth_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Burnt Bones")
@@ -2677,6 +3009,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / burnt_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_burntbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(burnt_bones_xp_hour).substr(0, String(burnt_bones_xp_hour).length -3) + "K</span>");
 			   }
 
  			   if($( "#myselect option:selected" ).text() == "Bat Bones")
@@ -2704,6 +3037,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / bat_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_batbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(bat_bones_xp_hour).substr(0, String(bat_bones_xp_hour).length -3) + "K</span>");
 			   }
 	
  			   if($( "#myselect option:selected" ).text() == "Cleansing Crystals")
@@ -2731,6 +3065,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / cleansing_crystal_xp).toFixed(0) + "</span> Cleansing Crystals<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_cleansingcrystal.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(cleansing_crystal_xp_hour).substr(0, String(cleansing_crystal_xp_hour).length -3) + "K</span>");
 			   }
 
 
@@ -2759,6 +3094,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / airut_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_airutbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(airut_bones_xp_hour).substr(0, String(airut_bones_xp_hour).length -3) + "K</span>");
 			   }
 
 			   if($( "#myselect option:selected" ).text() == "Big Bones")
@@ -2785,6 +3121,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / big_bones_xp).toFixed(0) + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bigbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(big_bones_xp_hour).substr(0, String(big_bones_xp_hour).length -3) + "K</span>");
 			   }
 			   if($( "#myselect option:selected" ).text() == "Bones")
 			   {
@@ -2810,6 +3147,9 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + ((remaining_xp / bones_xp).toFixed(0)).toLocaleString()  + "</span> Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_bone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(bones_xp_hour).substr(0, String(bones_xp_hour).length -3) + "K</span>");
+
+
 			   }
 
 			   if($( "#myselect option:selected" ).text() == "Dragon Bones")
@@ -2836,6 +3176,10 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / dragon_bones_xp).toFixed(0) + "</span> Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_dragonbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(dragon_bones_xp_hour).substr(0, String(dragon_bones_xp_hour).length -3) + "K</span>");
+
+			   		if(document.getElementById("firstage").checked)
+			   			$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(dragon_bones_xp_hour).substr(0, String(dragon_bones_xp_hour).length -5) + "K</span>");
 			   }
 			   if($( "#myselect option:selected" ).text() == "Frost Dragon Bones")
 			   {
@@ -2860,6 +3204,7 @@ function start()
 			   			var newStr = needed_cash / 1000000000;
 			   			$("#print").html("You will need <span style='color:lime'>" + (remaining_xp / frost_dragon_bones_xp).toFixed(0) + "</span> Frost Dragon Bones<br> And it will cost <span style='color:lime'>" + newStr.toFixed(1) + "b gp</span><br> And will take approximately <span style='color:lime'>" + remaining_hours_frostdragonbone.toFixed(1) + "</span> hours");
 			   		}
+			   		$("#xphour").html("Max XP/hour <span style='color:lime;'>" + String(frost_dragon_bones_xp_hour).substr(0, String(frost_dragon_bones_xp_hour).length -3) + "K</span>");
 
 			   }
 
@@ -2869,35 +3214,45 @@ function start()
 			   	$("#print").html("<h1 style='color:lime;'>You have already passed that level</h1>");
 			   }
 
-			   $("#remxp").html("<br><span style='font-size:2em;'>XP remaining between levels:</span><span style='color:lime;font-size:2em;'> " +Number($("#inputtarget").val() - $("#input").val()) + "</span>");
+			   $("#remxp").html("<br><span style='font-size:2em;'>XP remaining between levels:</span><span style='color:lime;font-size:2em;'> " + (Number($("#inputtarget").val() - $("#input").val())).toLocaleString() + " xp</span>");
 
            
 }
+
+$(document).ready(function(){
+$("#currentlvl").val("1");
+if($("#currentlvl").val() == 1)
+	{
+		$("#inputtarget").siblings("#input").val("0");
+	}
+	
+
+	$("#kaksataa").click(function(){
+
+	$("#inputtarget").val("200000000");
+})
+})
 
 $("#get").click(function(){
 
 	prevent = true;
 })
 
+
+
 </script>
-<div id="prices" style="transform:scale(0.8);position: absolute;top:0;left:0;text-align: left;margin-left:-20px;margin-top:-50px">
+<div id="prices" style="transform:scale(0.67);position: absolute;top:0;left:0;text-align: left;margin-left:-40px;margin-top:-220px">
 
 <table border=1 style="">
-<!--	
-	<tr>
+	
+
+	<!--<tr>
 		<td><img src="img/dinosaurbones.png"/><h2>Dinosaur Bones</h2></td>
 		<td><h2 id="dinosaurbones"></h2></td>
-	</tr>
-	<tr>
-		<td><img src="img/hardeneddragonbones.png"/><h2>Hardened Dragon Bones</h2></td>
-		<td><h2 id="hardeneddragonbones"></h2></td>
-	</tr>
+	</tr>-->
 	
-	<tr>
-		<td><img src="img/reinforceddragonbones.png"/><h2>Reinforced Dragon Bones</h2></td>
-		<td><h2 id="reinforceddragonbones"></h2></td>
-	</tr>
--->
+
+
 	<tr>
 		<td><img src="img/monkeybones.png"/><h2>Monkey Bones</h2></td>
 		<td><h2 id="monkeybones"></h2></td>
@@ -2906,6 +3261,10 @@ $("#get").click(function(){
 	<tr>
 		<td><img src="img/bigbones.png"/><h2>Big Bones</h2></td>
 		<td><h2 id="bigbone"></h2></td>
+	</tr>
+	<tr>
+		<td><img src="img/accursedashes.png"/><h2>Accursed Ashes</h2></td>
+		<td><h2 id="accursedashes"></h2></td>
 	</tr>
 	<tr>
 		<td><img src="img/bones.png"/><h2>Bones</h2></td>
@@ -2925,8 +3284,16 @@ $("#get").click(function(){
 		<td><h2 id="jogrebones"></h2></td>
 	</tr>
 	<tr>
+		<td><img src="img/impiousashes.png"/><h2>Impious Ashes</h2></td>
+		<td><h2 id="impiousashes"></h2></td>
+	</tr>
+	<tr>
 		<td><img src="img/wolfbones.png"/><h2>Wolf Bones</h2></td>
 		<td><h2 id="wolfbones"></h2></td>
+	</tr>
+	<tr>
+		<td><img src="img/infernalashes.png"/><h2>Infernal Ashes</h2></td>
+		<td><h2 id="infernalashes"></h2></td>
 	</tr>
 	<tr>
 		<td><img src="img/burntbones.png"/><h2>Burnt Bones</h2></td>
@@ -2935,6 +3302,10 @@ $("#get").click(function(){
 	<tr>
 		<td><img src="img/dragonbones.png"/><h2>Dragon Bones</h2></td>
 		<td><h2 id="dragonbone"></h2></td>
+	</tr>
+	<tr>
+		<td><img src="img/torturedashes.png"/><h2>Tortured Ashes</h2></td>
+		<td><h2 id="torturedashes"></h2></td>
 	</tr>
 	<tr>
 		<td><img src="img/wyvernbones.png"/><h2>Wyvern Bones</h2></td>
@@ -2949,6 +3320,10 @@ $("#get").click(function(){
 		<td><h2 id="airutbone"></h2></td>
 	</tr>
 	<tr>
+		<td><img src="img/hardeneddragonbones.png"/><h2>Hardened Dragon Bones</h2></td>
+		<td><h2 id="hardeneddragonbones"></h2></td>
+	</tr>
+	<tr>
 		<td><img src="img/fayrgbones.png"/><h2>Fayrg Bones</h2></td>
 		<td><h2 id="fayrgbones"></h2></td>
 	</tr>
@@ -2961,8 +3336,16 @@ $("#get").click(function(){
 		<td><h2 id="shaikahanbones"></h2></td>
 	</tr>
 	<tr>
+		<td><img src="img/reinforceddragonbones.png"/><h2>Reinforced Dragon Bones</h2></td>
+		<td><h2 id="reinforceddragonbones"></h2></td>
+	</tr>
+	<tr>
 		<td><img src="img/ourgbones.png"/><h2>Ourg Bones</h2></td>
 		<td><h2 id="ourgbones"></h2></td>
+	</tr>
+	<tr>
+		<td><img src="img/searingashes.png"/><h2>Searing Ashes</h2></td>
+		<td><h2 id="searingashes"></h2></td>
 	</tr>
 	<tr>
 		<td><img src="img/raurgbones.png"/><h2>Raurg Bones</h2></td>
@@ -2975,8 +3358,8 @@ $("#get").click(function(){
 
 </table>
 </div>
-<div align="center" style="margin:auto;width:30%;text-align: left;">
-	<span>Enter the name of player </span><input id="inputplayer"  /><span id="alert" style="color:red;display: none;"> Entered user was not found</span><br><br>
+<div align="center" style="margin:auto;width:32%;text-align: left;">
+	<span>Enter the name of player </span><input id="inputplayer" autocomplete="on" /><span id="alert" style="color:red;display: none;"> Entered user was not found</span><br><br>
 	<span>I will use </span>
 	<select id="myselect">
 		<option>Bones</option>
@@ -2986,6 +3369,13 @@ $("#get").click(function(){
 		<option>Airut Bones</option>
 		<option value="cleansing">Cleansing Crystals</option>
 		<option>Bat Bones</option>
+		<option>Hardened Dragon Bones</option>
+		<option>Reinforced Dragon Bones</option>
+		<option>Accursed Ashes</option>
+		<option>Impious Ashes</option>
+		<option>Infernal Ashes</option>
+		<option>Tortured Ashes</option>
+		<option>Searing Ashes</option>
 		<option>Burnt Bones</option>
 		<option>Dagannoth Bones</option>
 		<option>Fayrg Bones</option>
@@ -2999,14 +3389,15 @@ $("#get").click(function(){
 		<option>Zogre Bones</option>
 	</select><span> It is double xp weekend(+100%xp)</span><input id="doublexp" type="checkbox" />
 	<br><br>
-	<span>Current level: <input type="number" id="currentlvl" style="width:60px;"/> Current xp </span><input id="input" autocomplete="off" />  <br><br>
-	<span> Target level: <input type="number" id="customlvl" style="width:60px;"/> Target xp </span><input id="inputtarget"  autocomplete="off" /><br><br>
+	<span>Current level: <input min="1" type="number" id="currentlvl" style="width:60px;"/> Current xp </span><input id="input" autocomplete="off" />  <br><br>
+	<span> Target level: <input min="1" type="number" id="customlvl" style="width:60px;"/> Target xp </span><input id="inputtarget"  autocomplete="off" /> <button id="kaksataa">200m xp</button><br><br>
 	<span>Target level </span><button id="ninetynine">99</button> <button id="onetwenty">120</button> <br><br>
 	<span>I am using full First-Age outfit (+6%xp)</span><input id="firstage" type="checkbox" /><br><br>
 	<span>Bonus xp on prayer </span><input id="bonusxp"  autocomplete="off" /><br><br>
 	<button id="get" onclick="start()" >Calculate</button>
 	<div id="print" style="font-size:2em;"></div>
 	<div id="remxp"></div>
+	<div id="xphour" style="margin-top:100px;font-size:4em;"></div>
 </div>
 
 

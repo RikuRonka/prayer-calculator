@@ -41,6 +41,21 @@ header('Content-type:application/json;charset=utf-8');
 
 	$zogre_bones = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4812");
 
+	$hardened_dragon_bones = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=35008");
+
+	$reinforced_dragon_bones = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=35010");
+
+	//ashes
+
+	$accursed_ashes = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=20266");
+
+	$impious_ashes = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=20264");
+
+	$infernal_ashes = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=20268");
+
+	$tortured_ashes = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=33260");
+
+	$searing_ashes = file_get_contents("http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=34159");
 
 	$allbones = array();
 	array_push($allbones, $dragon_bones);
@@ -60,6 +75,16 @@ header('Content-type:application/json;charset=utf-8');
 	array_push($allbones, $wolf_bones);
 	array_push($allbones, $wyvern_bones);
 	array_push($allbones, $zogre_bones);
+	array_push($allbones, $hardened_dragon_bones);
+	array_push($allbones, $reinforced_dragon_bones);
+
+
+	//ashes
+	array_push($allbones, $accursed_ashes);
+	array_push($allbones, $impious_ashes);
+	array_push($allbones, $infernal_ashes);
+	array_push($allbones, $tortured_ashes);
+	array_push($allbones, $searing_ashes);
 
 	echo json_encode($allbones, JSON_UNESCAPED_SLASHES);
 
